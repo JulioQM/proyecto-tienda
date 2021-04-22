@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  
+ <persistence-unit name="persistenceDevquinchi">
+ 
+ <!-- Define la clase de Hibernate que implementa JPA -->
+ <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+ 
+ <!-- Define las clases que seran mapeadas al configurar la conexion a la base de datos -->
+ <class>com.devquinchi.proyecto_tienda.entity.Disquera</class>
+ <class>com.devquinchi.proyecto_tienda.entity.Genero</class>
+ <class>com.devquinchi.proyecto_tienda.entity.Subgenero</class> 
+ 
+ <properties>
+ <property name= "hibernate.show_sql" value="true" />
+ <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+ <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+ <property name="javax.persistence.jdbc.user" value="root" />
+ <property name="javax.persistence.jdbc.password" value="ADMIN" />
+ <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/tienda_musical" />
+</properties>
+ 
+ </persistence-unit>
+</persistence>
